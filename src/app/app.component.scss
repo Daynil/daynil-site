@@ -1,0 +1,41 @@
+.nav-bar {
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+}
+
+.logo-text {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.portfolio-pic {
+  border-radius: 50%;
+  width: 80px;
+  position: relative;
+  top: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.name {
+  position: relative;
+  left: 10%;
+}
+
+.name-text {
+  height: 25px;
+  font-size: 20px;
+}
+
+.job-desc {
+  font-weight: 400;
+  margin-top: -4px;
+}
+
+.nav-button {
+  position: relative;
+  right: 10%;
+}
