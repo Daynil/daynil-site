@@ -1,3 +1,12 @@
-<p>
-  home works!
-</p>
+<div id="home" [class.page-transition]="transitionService.isTransitioning()">
+  <div id="title-body">
+    <div [ngClass]="bgClasses()" id="bg"></div>
+    <h1>Hello! I'm Danny</h1>
+    <div class="divider"></div>
+    <h3>I build functional, responsive web applications with speed and user experience in mind.</h3>
+  </div>
+  <div id="link-wrap">
+    <button md-raised-button color="primary"
+            [routerLink]="['/portfolio']">See My Work</button>
+  </div>
+</div>

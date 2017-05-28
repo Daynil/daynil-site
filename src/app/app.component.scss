@@ -1,7 +1,13 @@
-$accent-color: hsl(47, 100%, 63%);
+@import './shared/common-styles.scss';
 
-nav-bar {
+.nav-bar {
   box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  z-index: 2;
+  position: relative;
+}
+
+.active {
+  color: $accent;
 }
 
 .logo-text {
@@ -24,7 +30,7 @@ nav-bar {
 
 .name {
   position: relative;
-  left: 10%;
+  left: 15%;
 }
 
 .name-text {
@@ -34,7 +40,14 @@ nav-bar {
 }
 
 .name-acc {
-  color: $accent-color;
+  color: $accent;
+  transition: 0.3s;
+}
+
+button.name:hover {
+  .name-acc {
+    color: white;
+  }
 }
 
 .job-desc {
@@ -43,7 +56,7 @@ nav-bar {
 
 .nav-button {
   position: relative;
-  right: 10%;
+  right: 15%;
   font-size: 16px;
   font-weight: 300;
 }
