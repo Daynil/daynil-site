@@ -3,6 +3,9 @@
 .loader {
   width: 50px;
   position: absolute;
+  @media (max-width: 950px) {
+    left: 325px;
+  }
 }
 
 .normal-nav-bar {
@@ -19,6 +22,10 @@
 
 .active {
   color: $accent;
+  @media (max-width: 650px) {
+    color: $primary;
+    text-decoration: underline;
+  }
 }
 
 .logo-text {
@@ -28,6 +35,9 @@
 }
 
 .portfolio-pic {
+  @media (max-width: 350px) {
+    display: none;
+  }
   border-radius: 50%;
   width: 80px;
   position: relative;
@@ -41,7 +51,9 @@
 
 .name {
   position: relative;
-  left: 15%;
+  @media (min-width: 950px) {
+    left: 15%;
+  }
 }
 
 .name-text {
@@ -66,8 +78,19 @@ button.name:hover {
 }
 
 .nav-button {
+  @media (max-width: 650px) {
+    display: none;
+  }
   position: relative;
-  right: 15%;
   font-size: 16px;
   font-weight: 300;
+  @media (min-width: 950px) {
+    right: 15%;
+  }
+}
+
+.sidenav-btn {
+  @media (min-width: 650px) {
+    display: none;
+  }
 }

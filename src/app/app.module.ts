@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdToolbarModule, MdButtonModule, MdCardModule, MdInputModule, MdProgressSpinnerModule } from '@angular/material';
+import { MdToolbarModule, MdButtonModule,
+         MdCardModule, MdInputModule,
+         MdProgressSpinnerModule, MdSidenavModule,
+         MdIconModule, MdListModule } from '@angular/material';
 
 import { routing } from './app.routing';
 
@@ -35,7 +38,10 @@ import { TransitionService } from './shared/transition.service';
     HttpModule,
     routing,
     BrowserAnimationsModule,
-    MdToolbarModule, MdButtonModule, MdCardModule, MdInputModule, MdProgressSpinnerModule
+    MdToolbarModule, MdButtonModule,
+    MdCardModule, MdInputModule,
+    MdProgressSpinnerModule, MdSidenavModule,
+    MdIconModule, MdListModule
   ],
   providers: [ TransitionService ],
   bootstrap: [AppComponent]

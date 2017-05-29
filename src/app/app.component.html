@@ -1,3 +1,27 @@
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="over" align="end">
+    <md-list>
+      <md-list-item>
+        <button md-button
+                routerLinkActive="active"
+                (click)="sidenav.close()"
+                [routerLink]="['/portfolio']">Projects</button>
+      </md-list-item>
+      <md-list-item>
+        <button md-button
+                routerLinkActive="active"
+                (click)="sidenav.close()"
+                [routerLink]="['/about-me']">About</button>
+      </md-list-item>
+      <md-list-item>
+        <button md-button
+                routerLinkActive="active"
+                (click)="sidenav.close()"
+                [routerLink]="['/contact']">Contact</button>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+
 <md-toolbar color="primary" [ngClass]="navBarBg()">
   <md-spinner class="loader" color="accent" *ngIf="this.transitionService.isLoading()"></md-spinner>
   <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707722/IMG_20151006_123225_3_ifvhtj.jpg"
@@ -21,6 +45,9 @@
   <button md-button class="nav-button" 
           routerLinkActive="active"
           [routerLink]="['/contact']">Contact</button>
+  <button md-icon-button class="sidenav-btn" (click)="sidenav.open()">
+    <md-icon>menu</md-icon>
+  </button>
 </md-toolbar>
 
 <router-outlet></router-outlet>
@@ -37,3 +64,4 @@
       <p>Copyright © Danny Libin {{ thisYear }}. All rights reserved.</p>
     </div>
   </div>
+</md-sidenav-container>
