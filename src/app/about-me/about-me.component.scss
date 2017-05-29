@@ -67,6 +67,8 @@
 
 #philosophy {
   margin-top: 10px;
+  margin-top: 10px;
+  font-size: 26px;
 }
 
 #about-me #me {
@@ -100,8 +102,10 @@
   margin-bottom: 40px;
 }
 
-#philosophy2 {
+#whoami {
   padding-top: 0px;
+  margin-top: 10px;
+  font-size: 26px;
 }
 
 #skills {
@@ -109,7 +113,7 @@
 }
 
 .prog {
-  background-color: hsl(45, 100%, 70%);
+  background-color: $primary-transparent;
   height: 7px;
   width: 100%;
   margin-top: 2px;

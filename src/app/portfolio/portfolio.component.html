@@ -1,47 +1,50 @@
 <div id="portfolio-link" [class.page-transition]="transitionService.isTransitioning()">
   <div class="container portfolio">
-    <h2 id="subtitle">Professional Projects</h2>
+    <h1 id="subtitle">Professional Projects</h1>
     <div class="divider"></div>
     <div class="project-row">
-      <div class="card">
-        <a [routerLink]="['/ccaw']">
-          <div class="image-container ccaw">
-            <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1479232629/ccawlogomod_zugyah.png" alt="ccaw project" id="ccaw">
-          </div>
-          <div class="caption">
-            <h4 class="text-center">Conference Management</h4>
-            <p class="text-center">Conference management application built to manage speakers and scheduling
-              for non-profit organization.
-            </p>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a [routerLink]="['/shelley']">
-          <div class="image-container shelley">
-            <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1470260927/logogood_wsyt4q.png" alt="shelley site" id="shelley">
-          </div>
-          <div class="caption">
-              <h4 class="text-center">Shelley Pier Counseling</h4>
-              <p class="text-center">Website for personal counseling business.
-                Showcases specialties and provides form-based email contact.
-              </p>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a [routerLink]="['/this-app']">
-          <div class="image-container site">
-            <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468784855/botarm_hlprs9.png" alt="portfolio app" id="portfolio-app">
-          </div>
-          <div class="caption">
-              <h4 class="text-center">Personal Site</h4>
-              <p class="text-center">My personal portfolio-app website.
-                Showcases my projects and information about me.
-              </p>
-          </div>
-        </a>
-      </div>
+      <md-card class="project-card">
+        <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1479232629/ccawlogomod_zugyah.png"
+             md-card-image class="ccaw" alt="ccaw project">
+        <md-card-content>
+          <h3 class="text-center">Conference Management</h3>
+          <p>
+            Conference management application built to manage speakers and scheduling
+            for non-profit organization.
+          </p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button routerLink="/ccaw">DETAILS</button>
+        </md-card-actions>
+      </md-card>
+      <md-card class="project-card">
+        <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1470260927/logogood_wsyt4q.png"
+             md-card-image class="shelley" alt="shelley site">
+        <md-card-content>
+          <h3 class="text-center">Shelley Pier Counseling</h3>
+          <p>
+            Website for personal counseling business.
+            Showcases specialties and provides form-based email contact.
+          </p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button routerLink="/shelley">DETAILS</button>
+        </md-card-actions>
+      </md-card>
+      <md-card class="project-card">
+        <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1496025027/personal-logo_pqnke0.png"
+             md-card-image class="site" alt="portfolio site">
+        <md-card-content>
+          <h3 class="text-center">Personal Site</h3>
+          <p>
+              My personal portfolio-app website.
+              Showcases my projects and information about me.
+          </p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button routerLink="/this-app">DETAILS</button>
+        </md-card-actions>
+      </md-card>
     </div>
 
 <!--    <h2 id="subtitle">Other Projects</h2>

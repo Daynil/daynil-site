@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  thisYear: number;
+
+  constructor() {
+    const today = new Date();
+    this.thisYear = today.getFullYear();
+  }
 
 }

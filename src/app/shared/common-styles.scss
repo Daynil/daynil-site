@@ -2,13 +2,23 @@
 
 $primary:                     hsl(200, 18%, 46%);
 $accent:                      hsl(47, 100%, 63%);
+$accent-dull:                 hsl(47, 100%, 45%);
 $primary-dark:                  darken($primary, 8%);
 $primary-light:                 lighten($primary, 8%);
-$primary-transparent:         hsla(0, 100%, 44%, 0.2);
-$primary-semi-transparent:    hsla(0, 100%, 44%, 0.5);
+$primary-bright:              hsl(190, 30%, 46%);
+$primary-transparent:         hsla(200, 18%, 46%, 0.2);
+$primary-semi-transparent:    hsla(200, 18%, 46%, 0.5);
 $primary-dark-bg:             #2B252C;
 $primary-success-transparent: hsla(120, 35%, 48%, 0.2);
 $white-light:                 hsl(40, 20%, 97%);
+
+a {
+  color: $accent-dull;
+  transition: 0.3s;
+  &:hover {
+    color: $accent;
+  }
+}
 
 /**** Animations ****/
 
@@ -56,6 +66,10 @@ $white-light:                 hsl(40, 20%, 97%);
 #contact-text {
   text-align: center;
   color: white;
+  font-weight: 100;
+  font-size: 24px;
+  margin: 0px;
+  margin-top: 10px;
 }
 
 #contact-link p {
@@ -95,4 +109,22 @@ $white-light:                 hsl(40, 20%, 97%);
     line-height: 32px;
     right: 3px;
   }
+}
+
+/***** All *****/
+
+.divider {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 3px;
+  background-color: $primary;
+  width: 60%;
+}
+
+#subtitle {
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 5px;
 }
