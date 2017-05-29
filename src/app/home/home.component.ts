@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
 
   loadBackground() {
     this.backgroundLoading = true;
-    let bg = new Image();
+    const bg = new Image();
     bg.onload = () => {
       this.backgroundLoading = false;
     };
-    bg.src = 'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707880/woVRMu1_btq6hj.jpg';
+    bg.src = '../../assets/jason-briscoe-149767.jpg';
   }
 
   bgClasses() {
