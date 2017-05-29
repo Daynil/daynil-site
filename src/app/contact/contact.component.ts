@@ -18,16 +18,16 @@ export class ContactComponent implements OnInit {
   status = '';
 
   constructor(private http: Http,
-              private transitionService: TransitionService) { }
+              public transitionService: TransitionService) { }
 
   ngOnInit() {
     this.transitionService.transition();
   }
 
   mail(name: HTMLInputElement, email: HTMLInputElement, comment: HTMLInputElement) {
-    let nameTxt = name.value;
-    let emailTxt = email.value;
-    let commentTxt = comment.value;
+    const nameTxt = name.value;
+    const emailTxt = email.value;
+    const commentTxt = comment.value;
 
     if (!nameTxt || !emailTxt || !commentTxt) {
       this.status = 'fail';
@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit {
       return;
     };
 
-    let mail = {name: nameTxt, email: emailTxt, comment: commentTxt};
+    const mail = {name: nameTxt, email: emailTxt, comment: commentTxt};
     return this.http
       .post(`${this.baseUrl}/email`, mail)
       .toPromise()
