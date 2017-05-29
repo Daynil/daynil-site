@@ -13,35 +13,18 @@ export class AboutMeComponent implements OnInit {
   languages = [];
   frameworks = [];
 
-  constructor(private transitionService: TransitionService) { }
+  constructor(public transitionService: TransitionService) { }
 
   ngOnInit() {
     this.transitionService.transition();
     this.showSkills();
-    this.animateSkillbar();
-  }
-
-  animateSkillbar() {
-
   }
 
   showSkills() {
     this.languages = [
       {
-        name: 'HTML',
-        amount: 95
-      },
-      {
-        name: 'SASS/CSS',
+        name: 'Typescript/Javascript',
         amount: 90
-      },
-      {
-        name: 'Javascript',
-        amount: 90
-      },
-      {
-        name: 'Typescript',
-        amount: 85
       },
       {
         name: 'Java',
@@ -52,6 +35,10 @@ export class AboutMeComponent implements OnInit {
         amount: 60
       },
       {
+        name: 'VB/VBA',
+        amount: 60
+      },
+      {
         name: 'Ruby',
         amount: 30
       }
@@ -59,22 +46,26 @@ export class AboutMeComponent implements OnInit {
 
     this.frameworks = [
       {
-        name: 'Angular 2.x',
+        name: 'Angular 2+',
         amount: 90
       },
       {
-        name: 'React',
+        name: 'Node.js',
         amount: 70
       },
       {
-        name: 'jQuery',
+        name: 'React',
         amount: 65
+      },
+      {
+        name: 'jQuery',
+        amount: 50
       },
       {
         name: 'Django',
         amount: 20
       }
-    ]
+    ];
   }
 
 
