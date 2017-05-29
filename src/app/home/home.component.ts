@@ -10,7 +10,7 @@ import { TransitionService } from '../shared/transition.service';
 export class HomeComponent implements OnInit {
   backgroundLoading = false;
 
-  constructor(private transitionService: TransitionService) { }
+  constructor(public transitionService: TransitionService) { }
 
   ngOnInit() {
     this.transitionService.transition();
@@ -19,11 +19,13 @@ export class HomeComponent implements OnInit {
 
   loadBackground() {
     this.backgroundLoading = true;
-    const bg = new Image();
+    this.transitionService.setLoading(true);
+    let bg = new Image();
     bg.onload = () => {
       this.backgroundLoading = false;
+      this.transitionService.setLoading(false);
     };
-    bg.src = '../../assets/jason-briscoe-149767.jpg';
+    bg.src = 'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1496071760/jason-briscoe-149767_lvrpf1.jpg';
   }
 
   bgClasses() {

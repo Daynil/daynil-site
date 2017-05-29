@@ -1,4 +1,5 @@
 <md-toolbar color="primary" [ngClass]="navBarBg()">
+  <md-spinner class="loader" color="accent" *ngIf="this.transitionService.isLoading()"></md-spinner>
   <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707722/IMG_20151006_123225_3_ifvhtj.jpg"
     alt="Portfolio Pic" 
     class="portfolio-pic name">

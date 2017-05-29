@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { TransitionService } from './shared/transition.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  spinnerColor = 'hsl(47, 100%, 63%)';
   thisYear: number;
 
-  constructor(private router: Router) {
+  constructor(public transitionService: TransitionService,
+              private router: Router) {
   }
 
   ngOnInit() {
