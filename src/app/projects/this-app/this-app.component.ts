@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TransitionService } from '../../shared/transition.service';
+
 @Component({
   selector: 'app-this-app',
   templateUrl: './this-app.component.html',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThisAppComponent implements OnInit {
 
-  constructor() { }
+  constructor(public transitionService: TransitionService) { }
 
   ngOnInit() {
+    this.transitionService.transition();
   }
 
 }

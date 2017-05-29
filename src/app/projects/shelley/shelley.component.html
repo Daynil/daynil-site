@@ -1,3 +1,53 @@
-<p>
-  shelley works!
-</p>
+<div [class.page-transition]="transitionService.isTransitioning()">
+
+  <div class="container route">
+    <h2 class="title">Shelley Pier Counseling</h2>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="col-md-12 carousel">
+        <carousel [interval]="interval" [slides]="slides"
+                  (imageZoom)="imageToZoom($event)">
+        </carousel>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="subtitle">What is it?</h3>
+      <p>
+        A website created for a client with a personal counseling business. The client requested 
+        a website that showcases all of her subspecialties, as well as a way for potential clients 
+        to contact her right from the website.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="subtitle">Methodology</h3>
+      <p>
+        I worked with the client to create the website design and presentation. The client liked the 
+        snappy response times of a single page application style website, so I created the website using 
+        front end routing.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="subtitle">Tech Stack</h3>
+      <ul>
+        <li><b>Front end:</b> Angular 2+</li>
+        <li><b>Back end:</b> Node and Express</li>
+        <li><b>Hosting:</b> Digital Ocean</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="subtitle">Links</h3>
+      <ul>
+        <li><a href="http://www.shelleypier.com" target="_blank">Client Website</a></li>
+        <li><a href="https://github.com/Daynil/shelley2" target="_blank">Github Repository</a></li>
+      </ul>
+    </div>
+  
+  </div>
+
+<image-zoom [zoomImgUrl]="zoomImgUrl" (zoomedOut)="zoomImgUrl = ''"></image-zoom>
+
+</div>

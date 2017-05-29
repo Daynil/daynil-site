@@ -1,3 +1,38 @@
-<p>
-  this-app works!
-</p>
+<div [class.page-transition]="transitionService.isTransitioning()">
+
+  <div class="container route">
+    <h2 class="title">Personal Site</h2>
+    <div class="divider"></div>
+
+    <div>
+      <h3 class="subtitle">What is it?</h3>
+      <p>
+        I created this website as a single page application as a way to showcase what I believe is the best of the web 
+        - snappy response, slick and interactive interface, and a clean, simple, responsive design. Although traditional 
+        backend-heavy websites still have their place, I believe a well thought out single page application 
+        architecture is the way forward in the presentation of most websites. With this architecture,
+        you get increased interactivity and immediate response times, as well as more flexibility in design 
+        and organization of code. I believe the slightly increased up-front load times, which can be minimized 
+        with intelligent use of preloading, are more than offset by all of these benefits.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="subtitle">Tech Stack</h3>
+      <ul>
+        <li><b>Front end:</b> Angular 4+</li>
+        <li><b>Back end:</b> Node and Express</li>
+        <li><b>Hosting:</b> Digital Ocean</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="subtitle">Links</h3>
+      <ul>
+        <li><a href="https://github.com/Daynil/daynil-site" target="_blank">Github Repository</a></li>
+      </ul>
+    </div>
+  
+  </div>
+
+</div>  

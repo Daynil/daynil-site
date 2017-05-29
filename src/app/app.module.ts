@@ -19,6 +19,9 @@ import { CcawComponent } from './projects/ccaw/ccaw.component';
 import { ShelleyComponent } from './projects/shelley/shelley.component';
 import { ThisAppComponent } from './projects/this-app/this-app.component';
 
+import { CarouselComponent } from './shared/carousel/carousel.component';
+import { ImageZoomComponent } from './shared/image-zoom/image-zoom.component';
+
 import { TransitionService } from './shared/transition.service';
 
 @NgModule({
@@ -30,7 +33,8 @@ import { TransitionService } from './shared/transition.service';
     PortfolioComponent,
     CcawComponent,
     ShelleyComponent,
-    ThisAppComponent
+    ThisAppComponent,
+    CarouselComponent, ImageZoomComponent
   ],
   imports: [
     BrowserModule,
