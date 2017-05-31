@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
       this.backgroundLoading = false;
       this.transitionService.setLoading(false);
     };
-    bg.src = 'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1496071760/jason-briscoe-149767_lvrpf1.jpg';
+    bg.src = 'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1496202874/jason-briscoe-149767-s_nkvq4s.jpg';
   }
 
   bgClasses() {
