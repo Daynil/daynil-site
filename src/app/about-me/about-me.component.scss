@@ -36,6 +36,9 @@
     font-size: 25px;
     font-weight: 100;
   }
+  @media (max-width: 1150px) {
+    display: none;
+  }
 }
 
 #name-small {

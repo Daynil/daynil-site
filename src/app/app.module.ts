@@ -23,6 +23,7 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { ImageZoomComponent } from './shared/image-zoom/image-zoom.component';
 
 import { TransitionService } from './shared/transition.service';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { TransitionService } from './shared/transition.service';
     CcawComponent,
     ShelleyComponent,
     ThisAppComponent,
-    CarouselComponent, ImageZoomComponent
+    CarouselComponent, ImageZoomComponent, PostsComponent
   ],
   imports: [
     BrowserModule,

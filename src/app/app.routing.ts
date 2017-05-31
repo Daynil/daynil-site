@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PostsComponent } from './posts/posts.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { CcawComponent } from './projects/ccaw/ccaw.component';
@@ -15,6 +16,7 @@ export const appRoutes: Routes = [
   { path: '',          component: HomeComponent },
   { path: 'about-me',  component: AboutMeComponent },
   { path: 'portfolio', component: PortfolioComponent },
+  { path: 'posts',     component: PostsComponent },
   { path: 'contact',   component: ContactComponent },
 
   { path: 'ccaw',      component: CcawComponent },

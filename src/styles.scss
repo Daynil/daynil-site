@@ -27,3 +27,15 @@
 		background-color: hsl(204, 77%, 54%);
 	}
 }
+
+body::-webkit-scrollbar {
+	width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: hsla(204, 10%, 50%, 0.5);
+}
+
+body::-webkit-scrollbar-thumb {
+		background-color: hsla(204, 10%, 50%, 0.8);
+}

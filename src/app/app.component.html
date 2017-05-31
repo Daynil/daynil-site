@@ -5,19 +5,25 @@
         <button md-button
                 routerLinkActive="active"
                 (click)="sidenav.close()"
-                [routerLink]="['/portfolio']">Projects</button>
+                routerLink="/portfolio">Projects</button>
       </md-list-item>
       <md-list-item>
         <button md-button
                 routerLinkActive="active"
                 (click)="sidenav.close()"
-                [routerLink]="['/about-me']">About</button>
+                routerLink="/about-me">About</button>
       </md-list-item>
       <md-list-item>
         <button md-button
                 routerLinkActive="active"
                 (click)="sidenav.close()"
-                [routerLink]="['/contact']">Contact</button>
+                routerLink="/posts">Posts</button>
+      </md-list-item>
+      <md-list-item>
+        <button md-button
+                routerLinkActive="active"
+                (click)="sidenav.close()"
+                routerLink="/contact">Contact</button>
       </md-list-item>
     </md-list>
   </md-sidenav>
@@ -27,7 +33,7 @@
   <img src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707722/IMG_20151006_123225_3_ifvhtj.jpg"
     alt="Portfolio Pic" 
     class="portfolio-pic name">
-  <button md-button class="name" [routerLink]="['/']">
+  <button md-button class="name" routerLink="/">
     <span class="logo-text">
       <span class="name-text">
         <span class="name-acc">{{'<'}}</span>DANNY LIBIN<span class="name-acc">{{'/>'}}</span>
@@ -38,13 +44,16 @@
   <span class="spacer"></span>
   <button md-button class="nav-button"
           routerLinkActive="active"
-          [routerLink]="['/portfolio']">Projects</button>
+          routerLink="/portfolio">Projects</button>
   <button md-button class="nav-button" 
           routerLinkActive="active"
-          [routerLink]="['/about-me']">About</button>
+          routerLink="/about-me">About</button>
   <button md-button class="nav-button" 
           routerLinkActive="active"
-          [routerLink]="['/contact']">Contact</button>
+          routerLink="/posts">Posts</button>
+  <button md-button class="nav-button" 
+          routerLinkActive="active"
+          routerLink="/contact">Contact</button>
   <button md-icon-button class="sidenav-btn" (click)="sidenav.open()">
     <md-icon>menu</md-icon>
   </button>
