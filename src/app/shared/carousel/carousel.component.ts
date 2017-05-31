@@ -1,6 +1,9 @@
 import { Component, OnInit,
          Input, Output, OnDestroy,
          ElementRef, ViewChild, EventEmitter } from '@angular/core';
+import { MdDialog } from '@angular/material';
+
+import { ImageZoomComponent } from '../image-zoom/image-zoom.component';
 
 @Component({
   selector: 'carousel',
@@ -21,7 +24,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   rotation;
   minHeight;
 
-  constructor() { }
+  constructor(public dialog: MdDialog) { }
 
   ngOnInit() {
     this.preloadImages();
@@ -89,7 +92,10 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   imgClicked(imageUrl: string) {
-    this.imageZoom.emit(imageUrl);
+    //this.imageZoom.emit(imageUrl);
+    this.dialog.open(ImageZoomComponent, {
+      data: imageUrl
+    });
   }
 
 }

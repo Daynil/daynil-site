@@ -6,7 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdToolbarModule, MdButtonModule,
          MdCardModule, MdInputModule,
          MdProgressSpinnerModule, MdSidenavModule,
-         MdIconModule, MdListModule } from '@angular/material';
+         MdIconModule, MdListModule,
+         MdDialogModule } from '@angular/material';
 
 import { routing } from './app.routing';
 
@@ -46,8 +47,9 @@ import { PostsComponent } from './posts/posts.component';
     MdToolbarModule, MdButtonModule,
     MdCardModule, MdInputModule,
     MdProgressSpinnerModule, MdSidenavModule,
-    MdIconModule, MdListModule
+    MdIconModule, MdListModule, MdDialogModule
   ],
+  entryComponents: [ ImageZoomComponent ],
   providers: [ TransitionService ],
   bootstrap: [AppComponent]
 })
