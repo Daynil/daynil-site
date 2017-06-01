@@ -106,6 +106,10 @@ $white-light:                 hsl(40, 20%, 97%);
 
 /***** All *****/
 
+p {
+  font-weight: 300;
+}
+
 .divider {
   margin: 0 auto;
   margin-top: 20px;
@@ -123,15 +127,15 @@ $white-light:                 hsl(40, 20%, 97%);
 }
 
 .subtitle {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 26px;
+  font-weight: 500;
 }
 
 a {
   color: $primary-bright;
-  transition: 0.3s;
+  transition: 0.4s;
   &:hover {
-    color: $primary-dark;
+    color: black;
     text-decoration: none;
   }
 }
