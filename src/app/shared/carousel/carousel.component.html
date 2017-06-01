@@ -3,8 +3,9 @@
     <div *ngIf="i === activeIndex" 
           [ngClass]="containerClass()"
           [style.min-height.px]="minHeight">
-      <img (click)="open(slide.imageUrl)" 
-           [src]="slide.imageUrl" class="img-responsive">
+      <a [href]="slide.imageUrl" target="_blank">
+        <img [src]="slide.imageUrl" class="img-responsive">
+      </a>
     </div>
   </div>
 

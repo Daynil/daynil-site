@@ -89,10 +89,6 @@ export class CarouselComponent implements OnInit, OnDestroy {
     };
   }
 
-  open(imgUrl: string){
-    window.open(imgUrl);
-  }
-
 }
 
 export class Slide {
