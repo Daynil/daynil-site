@@ -3,8 +3,6 @@ import { Component, OnInit,
          ElementRef, ViewChild, EventEmitter } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
-import { ImageZoomComponent } from '../image-zoom/image-zoom.component';
-
 @Component({
   selector: 'carousel',
   templateUrl: './carousel.component.html',
@@ -91,11 +89,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
     };
   }
 
-  imgClicked(imageUrl: string) {
-    //this.imageZoom.emit(imageUrl);
-    this.dialog.open(ImageZoomComponent, {
-      data: imageUrl
-    });
+  open(imgUrl: string){
+    window.open(imgUrl);
   }
 
 }

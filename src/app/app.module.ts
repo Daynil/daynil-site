@@ -21,7 +21,6 @@ import { ShelleyComponent } from './projects/shelley/shelley.component';
 import { ThisAppComponent } from './projects/this-app/this-app.component';
 
 import { CarouselComponent } from './shared/carousel/carousel.component';
-import { ImageZoomComponent } from './shared/image-zoom/image-zoom.component';
 
 import { TransitionService } from './shared/transition.service';
 import { PostsComponent } from './posts/posts.component';
@@ -36,7 +35,7 @@ import { PostsComponent } from './posts/posts.component';
     CcawComponent,
     ShelleyComponent,
     ThisAppComponent,
-    CarouselComponent, ImageZoomComponent, PostsComponent
+    CarouselComponent, PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +48,6 @@ import { PostsComponent } from './posts/posts.component';
     MdProgressSpinnerModule, MdSidenavModule,
     MdIconModule, MdListModule, MdDialogModule
   ],
-  entryComponents: [ ImageZoomComponent ],
   providers: [ TransitionService ],
   bootstrap: [AppComponent]
 })
