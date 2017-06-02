@@ -2,28 +2,17 @@
 
 // Starting theme
 
-#start-loading {
-	color: aliceblue;
-	font-size: 50px;
-	font-family: 'Roboto';
-	font-weight: 100;
-  z-index: 2;
+#load-bar {
+	width: 100vw;
+	height: 8px;
+	animation: color 1s ease-in-out infinite;
 }
 
-#start-container {
-	width: 100%;
-	height: 100vh;
-	animation: start-color 6s ease-in-out infinite;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-@keyframes start-color {
+@keyframes color {
 	100%, 0% {
-		background-color: hsl(204, 42%, 46%);
+		background-color: hsl(204, 30%, 46%);
 	}
 	50% {
-		background-color: hsl(204, 77%, 54%);
+		background-color: hsl(204, 85%, 54%);
 	}
 }
