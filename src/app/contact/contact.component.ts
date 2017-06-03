@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Http } from '@angular/http';
+import { MdSnackBar } from '@angular/material';
 import 'rxjs/add/operator/toPromise';
 import { environment } from '../../environments/environment';
 
@@ -12,13 +13,14 @@ import { TransitionService } from '../shared/transition.service';
 })
 export class ContactComponent implements OnInit {
 
-  baseUrl = environment.production ? '' : 'http://localhost:3000';
+  baseUrl = environment.production ? '' : 'http://localhost:3003';
 
   message = '';
   status = '';
 
   constructor(private http: Http,
-              public transitionService: TransitionService) { }
+              public transitionService: TransitionService,
+              public snackBar: MdSnackBar) { }
 
   ngOnInit() {
     this.transitionService.transition();
@@ -48,23 +50,15 @@ export class ContactComponent implements OnInit {
         name.value = '';
         email.value = '';
         comment.value = '';
-        this.status = 'success';
-        this.message = `Thanks for contacting me. I'll get back with you as soon as possible!`;
+        this.snackBar.open(`Thanks for contacting me. I'll get back with you as soon as possible!`, 'OK', {
+          duration: 5000
+        });
       })
       .catch(err => {
-        this.status = 'fail';
-        this.message = `Oops, there was an error! Please try again later!`;
+        this.snackBar.open(`Oops, there was an error! Please try again later!`, 'OK', {
+          duration: 5000
+        });
       });
-  }
-
-  setAlertClass() {
-    return {
-      'alert': true,
-      'page-transition': true,
-      'gone': !this.message,
-      'alert-success': this.status === 'success',
-      'alert-danger': this.status === 'fail'
-    };
   }
 
 }

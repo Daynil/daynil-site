@@ -7,7 +7,8 @@ import { MdToolbarModule, MdButtonModule,
          MdCardModule, MdInputModule,
          MdProgressSpinnerModule, MdSidenavModule,
          MdIconModule, MdListModule,
-         MdDialogModule } from '@angular/material';
+         MdDialogModule,
+         MdSnackBarModule } from '@angular/material';
 
 import { routing } from './app.routing';
 
@@ -46,7 +47,8 @@ import { PostsComponent } from './posts/posts.component';
     MdToolbarModule, MdButtonModule,
     MdCardModule, MdInputModule,
     MdProgressSpinnerModule, MdSidenavModule,
-    MdIconModule, MdListModule, MdDialogModule
+    MdIconModule, MdListModule, MdDialogModule,
+    MdSnackBarModule
   ],
   providers: [ TransitionService ],
   bootstrap: [AppComponent]
