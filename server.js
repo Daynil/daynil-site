@@ -13,7 +13,7 @@ require('dotenv').load();
 const Mailgun = require('mailgun-js');
 const mailgun_api = process.env.MAILGUN_API_KEY;
 const domain = 'dlibin.net';
-const our_email = 'dlibinrx@gmail.com';
+const our_email = process.env.EMAIL
 const mailgun = new Mailgun({apiKey: mailgun_api, domain: domain});
 
 const app = express();

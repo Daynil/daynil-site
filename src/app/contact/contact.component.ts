@@ -32,15 +32,12 @@ export class ContactComponent implements OnInit {
     const commentTxt = comment.value;
 
     if (!nameTxt || !emailTxt || !commentTxt) {
-      this.status = 'fail';
-      this.message = 'Please fill out all fields!';
-      setTimeout(() => {
-        this.status = '';
-        this.message = '';
-      }, 5000);
+      this.snackBar.open(`Please fill out all fields!`, 'OK', {
+        duration: 5000
+      });
       return;
     };
-
+    this.transitionService.setLoading(true);
     const mail = {name: nameTxt, email: emailTxt, comment: commentTxt};
     return this.http
       .post(`${this.baseUrl}/email`, mail)
@@ -50,11 +47,13 @@ export class ContactComponent implements OnInit {
         name.value = '';
         email.value = '';
         comment.value = '';
+        this.transitionService.setLoading(false);
         this.snackBar.open(`Thanks for contacting me. I'll get back with you as soon as possible!`, 'OK', {
           duration: 5000
         });
       })
       .catch(err => {
+        this.transitionService.setLoading(false);
         this.snackBar.open(`Oops, there was an error! Please try again later!`, 'OK', {
           duration: 5000
         });
