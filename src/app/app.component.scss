@@ -21,11 +21,7 @@
 }
 
 .active {
-  color: $accent;
-  @media (max-width: 720px) {
-    color: $primary;
-    text-decoration: underline;
-  }
+  background-color: hsla(0, 100%, 100%, 0.1);
 }
 
 .logo-text {
