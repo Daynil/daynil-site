@@ -38,11 +38,9 @@
   @media (max-width: 350px) {
     display: none;
   }
-  border-radius: 50%;
   width: 80px;
   position: relative;
-  top: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  bottom: 3px;
 }
 
 .spacer {
@@ -62,9 +60,18 @@
   font-family: "Roboto Mono";
 }
 
+#name-only {
+  font-family: 'Lato';
+  font-weight: 700;
+}
+
 .name-acc {
   color: $accent;
   transition: 0.3s;
+  font-family: 'Lato';
+  font-weight: 400;
+  position: relative;
+  bottom: 1px;
 }
 
 button.name:hover {
